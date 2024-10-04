@@ -1,0 +1,62 @@
+body {
+    background-image: url("matterhorn_day.jpg");
+    background-size: 100%;
+    margin: 0 5%;
+}
+
+.ui-dialog .ui-dialog-content {
+    background-color: deepskyblue; /* Apply the background color to the dialog content */
+    font-family: Arial; /* Set the font family */
+}
+
+#header {
+    cursor: pointer;
+}
+
+#searchResults {
+    visibility: hidden;
+}
+
+#time {
+    visibility: hidden;
+/*    background-color: deepskyblue;*/
+}
+
+.search-bar {
+    display: flex;
+    align-items: center; /* Align vertically */
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.search-button {
+    flex-grow: 1;
+    height: 40px;
+    font-size: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    flex-grow: 7;
+}
+
+.other-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.button {
+    width: 100px;
+    height: 20px;
+    font-size: 40px;
+    flex-shrink: 0;
+}
+
+/*.dialog {
+    background-color: deepskyblue;
+    font-family: Arial
+}*/
+
