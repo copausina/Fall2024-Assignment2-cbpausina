@@ -1,25 +1,35 @@
 body {
     background-image: url("matterhorn_day.jpg");
-    background-size: 100%;
+    background-size: cover; /* This makes the image cover the entire screen */
+    background-position: bottom center; /* Align the image to the top center */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    height: 100%;
     margin: 0 5%;
-}
-
-.ui-dialog .ui-dialog-content {
-    background-color: deepskyblue; /* Apply the background color to the dialog content */
-    font-family: Arial; /* Set the font family */
 }
 
 #header {
     cursor: pointer;
+    font-family: Tahoma;
+    color: #665874;
 }
 
 #searchResults {
     visibility: hidden;
+    background-color: rgba(0, 150, 250, 0.85);
+    padding: 5px 35px;
+    margin: 10px 0px;
+    height: calc(100vh - 10px); /* Adjust the value based on padding+ margins */
+    overflow-y: auto; /* makes div scrollable */
 }
 
 #time {
     visibility: hidden;
-/*    background-color: deepskyblue;*/
+    color: red;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
 }
 
 .search-bar {
@@ -48,15 +58,7 @@ input[type="text"] {
     gap: 20px;
 }
 
-.button {
-    width: 100px;
-    height: 20px;
-    font-size: 40px;
-    flex-shrink: 0;
+a:link {
+    color: #574866; /* color links the same as text inside buttons in eggplant theme */
 }
-
-/*.dialog {
-    background-color: deepskyblue;
-    font-family: Arial
-}*/
 

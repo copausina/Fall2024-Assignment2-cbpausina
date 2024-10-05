@@ -25,9 +25,9 @@ function apiSearch(lucky) {
                 }
 
                 $('#searchResults').html(results);
-                $('#searchResults').dialog({
-                    height: $(window).height() // prevent dialog box from stretching page vertically
-                });
+                //$('#searchResults').dialog({
+                //    height: $(window).height() // prevent dialog box from stretching page vertically
+                //});
             }
         })
         .fail(function () {
@@ -53,15 +53,24 @@ function displayTime() {
     $('#time').css('visibility', 'visible'); //change visibilty from hidden once time is displayed
 }
 
-const images = [
+let images = [
     'matterhorn_day.jpg',
     'matterhorn_dusk.jpg'
 ];
-let currentImageIndex = 0;
+let colors = [
+    'rgba(0, 150, 250, 0.85)',
+    'rgba(250, 150, 0, 0.85)'
+]
+let i = 0;
 function changeBackground(){
-    currentImageIndex = (currentImageIndex + 1) % images.length;
-    document.body.style.backgroundImage = `url('${images[currentImageIndex]}')`;
+    i = (i + 1) % images.length;
+    document.body.style.backgroundImage = `url('${images[i]}')`;
+    $("#searchResults").css("background-color", colors[i]);
 }
+$(function () {
+    $("button").button();  // Apply jQuery UI style to all buttons
+});
+
 //Using DOM instead of onclick
 //document.getElementById('header').addEventListener('click', function () {
 //    currentImageIndex = (currentImageIndex + 1) % images.length;
